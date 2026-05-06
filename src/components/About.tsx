@@ -131,7 +131,7 @@ const About = () => {
                 size={18}
                 className="mr-1 group-hover:translate-y-[2px] transition-transform"
               />
-              Download 
+              Download Resume
               {/* Glow Effect */}
               <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-30 blur-md transition-opacity"></span>
             </button>
