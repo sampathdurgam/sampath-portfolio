@@ -173,6 +173,55 @@ const Projects = () => {
       demoLink: "https://v9homefurniture.netlify.app/",
     },
     {
+      title: "VPR Mining",
+      subtitle: "Internship",
+      image: "https://cdn.prod.website-files.com/6989e48f9db68fa2b02a476f/69f9d1989237628e221e543b_irrigation-ongoing-4.png",
+      description:
+        "Developed a responsive enterprise project showcase for a mining and infrastructure company using embedded custom code in Webflow, featuring interactive project cards, smooth animations, expandable highlights, and optimized mobile performance.",
+      highlights: [
+        "Built using Webflow and with Embedded custom code components",
+        "Intergarted the Map feature with pin points",
+        "Dynamic product showcase",
+        "SEO optimized performance",
+      ],
+      tech: ["React.js","CMS", "Integrated Map", "SEO Optimization", "Webflow"],
+      // gradient: "from-orange-500 to-amber-400",
+      // codeLink: "https://github.com/sampathdurgam/Furniture_Store",
+      demoLink: "https://www.vprmininginfra.com/",
+    },
+    {
+      title: "Abja Power",
+      subtitle: "Internship",
+      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800",
+      description:
+        "Developed and integrated a responsive corporate website for ABJA Power featuring enterprise UI sections, service showcases, project modules, and optimized Webflow embed integrations for the energy and infrastructure sector.",
+      highlights: [
+        "Built using Webflow and with Embedded custom code components",
+        "Dynamic product showcase",
+        "SEO optimized performance",
+      ],
+      tech: ["React.js","CMS","SEO Optimization", "Webflow"],
+      gradient: "from-orange-500 to-amber-400",
+      // codeLink: "https://github.com/sampathdurgam/Furniture_Store",
+      demoLink: "https://abjapower.com/",
+    },
+    {
+      title: "Cyma",
+      subtitle: "Internship",
+      image: "https://mycyma.com/assets/images/Response%20Page/Banner-Mobile.png",
+      description:
+        "Developed a responsive corporate website for CYMA, a cybersecurity solutions company, using Webflow and custom embedded code. Built enterprise-style UI sections, interactive layouts, smooth animations, and mobile-optimized components to showcase cybersecurity services and solutions with a modern and scalable design.",
+      highlights: [
+        "Built using Webflow and with Embedded custom code components",
+        "Dynamic product showcase",
+        "SEO optimized performance",
+      ],
+      tech: ["React.js","CMS","SEO Optimization", "Webflow"],
+      gradient: "from-orange-500 to-amber-400",
+      // codeLink: "https://github.com/sampathdurgam/Furniture_Store",
+      demoLink: "https://cyma-708003.webflow.io/",
+    },
+    {
       title: "CareerLinks",
       subtitle: "Full Stack Job Portal",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800",
@@ -247,11 +296,11 @@ const Projects = () => {
                 <Card className="group h-full flex flex-col relative overflow-hidden border-primary/10 bg-card/50 backdrop-blur-sm hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
                   {/* Image Container */}
                   <div className="relative h-56 overflow-hidden">
-                    <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-40 transition-opacity duration-500`} />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10`} />
                     <img 
                       src={project.image} 
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110"
                     />
                     <div className="absolute top-4 right-4 flex gap-2">
                       <Badge className="bg-background/80 backdrop-blur-md text-foreground border-none h-8 px-3">
@@ -330,11 +379,11 @@ const Projects = () => {
                         animate={{ y: 0 }}
                         exit={{ y: "100%" }}
                         transition={{ type: "spring", damping: 30, stiffness: 300 }}
-                        className="absolute inset-x-0 bottom-0 h-[70%] bg-card border-t border-primary/20 p-6 z-20 flex flex-col shadow-[0_-10px_30px_rgba(0,0,0,0.5)]"
+                        className="absolute inset-x-0 bottom-0 h-[80%] bg-card border-t border-primary/20 p-6 z-20 flex flex-col shadow-[0_-10px_30px_rgba(0,0,0,0.5)]"
                       >
                         <div className="flex justify-between items-center mb-4">
                           <h4 className="text-sm font-bold flex items-center tracking-tight">
-                            Key Highlights <ChevronRight className="ml-1 h-3 w-3 text-primary" />
+                            Project Details <ChevronRight className="ml-1 h-3 w-3 text-primary" />
                           </h4>
                           <Button
                             size="icon"
@@ -345,20 +394,35 @@ const Projects = () => {
                             <X className="h-4 w-4" />
                           </Button>
                         </div>
-                        <ul className="space-y-3 overflow-y-auto pr-2 custom-scrollbar">
-                          {project.highlights.map((highlight, i) => (
-                            <motion.li 
-                              key={i}
-                              initial={{ opacity: 0, x: -10 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: i * 0.05 }}
-                              className="flex items-start gap-2.5 text-xs text-muted-foreground leading-relaxed"
-                            >
-                              <div className="w-1 h-1 rounded-full bg-primary mt-1.5 flex-shrink-0 shadow-[0_0_8px_rgba(var(--primary),0.5)]" />
-                              {highlight}
-                            </motion.li>
-                          ))}
-                        </ul>
+
+                        {/* Scrollable Content Area */}
+                        <div className="overflow-y-auto pr-2 space-y-6 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+                          <div>
+                            <h5 className="text-[10px] uppercase tracking-wider text-primary font-bold mb-2">Description</h5>
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                              {project.description}
+                            </p>
+                          </div>
+
+                          <div>
+                            <h5 className="text-[10px] uppercase tracking-wider text-primary font-bold mb-2">Key Highlights</h5>
+                            <ul className="space-y-3">
+                              {project.highlights.map((highlight, i) => (
+                                <motion.li 
+                                  key={i}
+                                  initial={{ opacity: 0, x: -10 }}
+                                  animate={{ opacity: 1, x: 0 }}
+                                  transition={{ delay: i * 0.05 }}
+                                  className="flex items-start gap-2.5 text-xs text-muted-foreground leading-relaxed"
+                                >
+                                  <div className="w-1 h-1 rounded-full bg-primary mt-1.5 flex-shrink-0 shadow-[0_0_8px_rgba(var(--primary),0.5)]" />
+                                  {highlight}
+                                </motion.li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+
                         <div className="mt-auto pt-4 border-t border-primary/5">
                           <p className="text-[10px] text-primary/60 font-medium truncate">
                             {project.tech.join(" • ")}
