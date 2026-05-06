@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import profileImage from "@/assets/image.jpg";
 const downloadResume = () => {
   window.open(
-    "https://drive.google.com/file/d/1Fo2EW6QCPKFr55jEtYktipU9zJH4pFhf/view?usp=drive_link",
+    "https://drive.google.com/file/d/1fkJhambP199QeIHixb94Qq739g9_3kg5/view?usp=sharing",
     "_blank"
   );
 };

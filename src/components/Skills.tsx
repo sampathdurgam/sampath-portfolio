@@ -25,6 +25,7 @@ const Skills = () => {
         { name: "MVC Architecture", level: 85 },
         { name: "GitHub", level: 85 },
         { name: "OOP Design", level: 90 },
+        { name: "Webflow", level: 90 },
       ],
     },
     {
